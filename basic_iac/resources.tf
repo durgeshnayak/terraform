@@ -4,6 +4,10 @@ resource "aws_instance" "t2micro_instance" {
 
   subnet_id = aws_subnet.publicsubnet_1a.id
 
+  provisioner "local-exec" {
+    command = "echo ${self.private_ip} >> private_ips.txt"
+  }
+
   tags = {
     Name = var.instance_name
   }
