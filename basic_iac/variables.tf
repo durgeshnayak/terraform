@@ -15,3 +15,10 @@ variable "instance_name" {
   description = "Name of the AWS EC2 instance"
   default = "AWS EC2 Instance"
 }
+
+#SSH Key
+variable "ssh_key" {
+  type = string
+  description = "SSH Key Name"
+  
+}
